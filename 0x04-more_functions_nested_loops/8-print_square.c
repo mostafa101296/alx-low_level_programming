@@ -1,41 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - Fizz Buzz code
- *
+ * print_square - check for a digit
+ * @n: number of _ to be printed
  * Return: void
  */
 
-int main(void)
+void print_square(int n)
 {
-	int i = 1;
+	int i = 0, ii;
 
-	while (i <= 100)
+	while (i < n && n > 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		ii = 0;
+		while (ii < n)
 		{
-			printf("FizzBuzz");
+			_putchar('#');
+			ii++;
 		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%i", i);
-		}
-		if (i != 100)
-		{
-			putchar(' ');
-		}
-
+		_putchar('\n');
 		i++;
 	}
-	putchar('\n');
-	return (0);
+	if (i == 0)
+		_putchar('\n');
 }
