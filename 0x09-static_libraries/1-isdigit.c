@@ -1,19 +1,10 @@
 #include "main.h"
-
-/**
- * _isdigit - checks for digits
- * @c: parameter
- * Return: 0 or 1
- */
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 int _isdigit(int c)
 {
-	if (c >= 48 && c < 58)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+    return isdigit(c);
 }
